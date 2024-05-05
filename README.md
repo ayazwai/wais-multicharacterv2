@@ -119,11 +119,11 @@ Config.TebexPackages = {
 
 - Now when a product is sold, it will be forwarded to your server.
 
-# How Do I Change the Default Spawn Point / I Want the Character to Spawn Where I Want When First Created
+## How Do I Change the Default Spawn Point / I Want the Character to Spawn Where I Want When First Created
 
 - Go to the config file and find the variable `Config.DefaultSpawnCoords`. Copy and paste the `vector3` coordinate where you want the character to be spawned on the first record as the value
 
-# How do I access the character menu again / How do I activate the Logout & Char commands?
+## How do I access the character menu again / How do I activate the Logout & Char commands?
 
 - You can change the command in the `Config.LogoutCommand` table in the config file or set it to be used only by administrators.
 
@@ -135,7 +135,7 @@ Config.LogoutCommand = {
 
 ```
 
-# I want to block UIs like hud or something like that when multicaracter is opened / Switch different UIs on and off
+## I want to block UIs like hud or something like that when multicaracter is opened / Switch different UIs on and off
 
 - There are some functions that work when the multicaracter is switched on or off. You can access them from the Config file.
 - You can check the content below for example uses
@@ -152,7 +152,7 @@ Config.CloseUIs = function()
 end
 ```
 
-# How do I trigger the Spawnselector / How do I turn on the Spawnselector
+## How do I trigger the Spawnselector / How do I turn on the Spawnselector
 
 - First of all, I would like to state that in esx versions, if your spawnselector script is manually opened with a trigger, that is, if it is not automatic, change the function below in the config file with your own event.
 
@@ -178,7 +178,7 @@ Config.CharacterSelected = function(charid)
 end
 ```
 
-# How do I change the starting items / How do I give items to new person?
+## How do I change the starting items / How do I give items to new person?
 
 - For this you need to go to the Config_Sv.lua file. Then, if you are using ESX, you should use the place specified below.
 
@@ -205,16 +205,16 @@ ConfigSV.StarterItems = Config.Framework.Framework == "esx" and {
 }
 ```
 
-# How do I set it to my language? / Is there a Language file?
+## How do I set it to my language? / Is there a Language file?
 
 - Yes, there is a file and a table. You can organise it according to your language.
 - Go to `wais-multicharacterv2/html/public/Config.json` file and edit the data in `languages` variable according to yourself.
 
-# Where can I change the text of content such as Blacklist words, Countries and Months / How can I add new ones?
+## Where can I change the text of content such as Blacklist words, Countries and Months / How can I add new ones?
 
 - You can make such content by opening the following file. `wais-multicharacterv2/html/public/Config.json`
 
-# How do I change the colours to my own server's theme / Can I change the colours?
+## How do I change the colours to my own server's theme / Can I change the colours?
 
 - Yes, you can change the colours as you hope to see them. Posts, icons, etc. Visit this file for the main content. `wais-multicharacterv2/html/public/css/app.css`
 - Find the contents of `:root` in the first few lines. Set the variables in it; HEX or RGBA codes according to your own colour code without disturbing the opacity settings too much.
