@@ -28,6 +28,55 @@ ensure wais-multicharacterv2
 - - If you are using SharedEvent old core, you can find and paste the shared event from any script or from the infrastructure itself. This is important.
 
 
+- ### Important for QBCore servers!
+- - For old QBCore users, qb-core/server/player.lua file should be opened.
+- - `function QBCore.Player.Login(source, citizenid, newData)` Function must be available.
+- - `function QBCore.Player.Login(source, citizenid, newData)` Function should be found. `else` part of `if citizenid then` query should be opened.
+- - the function `QBCore.Player.CheckPlayerData(src, newData)` should be made as follows.
+
+```
+    local required = QBCore.Player.CheckPlayerData(src, newData)
+    TriggerEvent('wais:sendNewCharacterData', required.source, required.cid, required.citizenid)
+```
+![oldseems](https://imgur.com/NakKIwJ.png)
+
+- - After this section is made as above, the following path should be followed.
+- - `function QBCore.Player.CheckPlayerData(source, PlayerData)` The specified function must be found and go to the last line of this function. 
+- - Then the following codes should be pasted.
+
+```
+    return {
+        source = src,
+        cid = PlayerData.cid,
+        citizenid = PlayerData.citizenid
+    }
+```
+![oldseems2](https://imgur.com/UHPBUUR.png)
+
+- - For New QBCore users, qb-core/server/player.lua file should be opened.
+- - `function QBCore.Player.Login(source, citizenid, newData)` Function must be available.
+- - `function QBCore.Player.Login(source, citizenid, newData)` Function should be found. `else` part of `if citizenid then` query should be opened.
+- - the function `QBCore.Player.CheckPlayerData(src, newData)` should be made as follows.
+
+```
+    local required = QBCore.Player.CheckPlayerData(source, newData)
+    TriggerEvent('wais:sendNewCharacterData', required.source, required.cid, required.citizenid)
+```
+![newseems](https://i.imgur.com/YbqDztO.png)
+
+- - After this section is made as above, the following path should be followed.
+- - `function QBCore.Player.CreatePlayer(PlayerData, Offline)` The specified function must be found and go to the last line of this function. 
+- - Then the following codes should be pasted.
+
+```
+    return Offline and true or {
+        source = src,
+        cid = PlayerData.cid,
+        citizenid = PlayerData.citizenid
+    }
+```
+![newseems2](https://i.imgur.com/YUr9KC7.png)
+
 # How do I transfer old characters / What is TransferData?
 
 - It is used to transfer your old character data to the new multicaracter script. Set the value of Config.TransferData variable to `@true` then restart the script or restart the server. When you see that all characters have been transferred, you can restart the server or script again by setting `@false`. 
