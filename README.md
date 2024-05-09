@@ -9,6 +9,7 @@
 - Do not change the name of the script
 - Put the script in the resources folder, do not use any folderisation.
 - Prefer to start manually in server.cfg as follows.
+- `wais-compatibility` script is required. Named `wais-compatibility-hudv5` in Keymaster
 - Take care to start the script manually after your core.
 
 ```
