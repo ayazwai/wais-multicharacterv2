@@ -13,6 +13,7 @@
 
 ```
 ensure [yourcore]
+ensure wais-compatibility
 ensure wais-multicharacterv2
 ```
 
