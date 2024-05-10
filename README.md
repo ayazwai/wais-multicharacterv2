@@ -82,7 +82,7 @@ ensure wais-multicharacterv2
         citizenid = PlayerData.citizenid
     }
 ```
-![newseems2](https://i.imgur.com/YUr9KC7.png)
+![newseems2](https://i.imgur.com/1MEdjvS.png)
 
 # How do I transfer old characters / What is TransferData?
 
