@@ -154,7 +154,7 @@ We have connected tebex with our server above, and now we will transfer the sale
 - On the page that opens before us, we enter the title of the product. This is very important because we will also use the product title you entered in the script, so be careful to write neat and plain text without emojis.
 - After entering the other necessary information of the product, "Configure what your customers should receive upon purchasing this package".We select the "+GAME SERVER COMMANDS" option from the section.
 - From the drop-down section, we choose the server name that we just created in the above steps. Then click the "ADD COMMAND" button at the bottom.
-- After clicking the button, we paste the following code in the "Enter the command to execute on your server" section. This code: ```tebex:buypackage {"tid": "{transaction}",  "mail": "{email}", "pname": "{packageName}", "price": "{price}"}```
+- After clicking the button, we paste the following code in the "Enter the command to execute on your server" section. This code: ```tebex_buypackage {"tid": "{transaction}",  "mail": "{email}", "pname": "{packageName}", "price": "{price}"}```
 - After pasting the code, click the settings icon on the right. From this section, we select our server in the "Game server to Execute On" section. From the "Require Player To Be Online" section, we select the "Execute the command even if the player is offline" option and create our package.
 - Copy the product name you created. Find the TebexPack table and create a new table in it as follows: 
 
