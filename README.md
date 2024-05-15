@@ -30,12 +30,22 @@ ensure wais-multicharacterv2
 - - If you are using SharedEvent old core, you can find and paste the shared event from any script or from the infrastructure itself. This is important.
 
 - ## WARNING FOR ESX!
-- To use Wais-multicharacterv2 you need to follow the steps below.
+- - Delete or disable the following scripts.
+```
+esx_identity
+esx_multicharacter
+```
 
+- To use Wais-multicharacterv2 you need to follow the steps below.
 - open es_extended -> config.lua
 - Here, delete esx_multicharacter or other script name in the multicharacter section and just make it true
 
 - ## Important for QBCore servers!
+- - Delete or disable the following script.
+```
+qb-mulicharacter
+```
+
 - - For old QBCore users, qb-core/server/player.lua file should be opened.
 - - `function QBCore.Player.Login(source, citizenid, newData)` Function must be available.
 - - `function QBCore.Player.Login(source, citizenid, newData)` Function should be found. `else` part of `if citizenid then` query should be opened.
