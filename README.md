@@ -86,7 +86,7 @@ qb-mulicharacter
 - - Then the following codes should be pasted.
 
 ```
-    return Offline and true or {
+    return Offline and self or {
         source = PlayerData.source,
         cid = PlayerData.cid,
         citizenid = PlayerData.citizenid
